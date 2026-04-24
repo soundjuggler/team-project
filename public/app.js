@@ -91,7 +91,7 @@ function applyFilters() {
     container.innerHTML = filtered.map(m => `
         <div class="movie-card" onclick="openMovieModal('${m._id}')">
             <div class="movie-card-inner">
-                <div class="status-badge">${m.status || 'watchlist'}</div>
+                <div class="status-badge status-${m.status || 'watchlist'}">${m.status || 'watchlist'}</div>
                 <img src="${m.poster}" alt="${m.title}">
                 <div class="movie-overlay"></div>
             </div>

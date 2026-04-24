@@ -220,15 +220,39 @@ h1{
   position:absolute;
   top:10px;
   left:10px;
-  background:linear-gradient(90deg, rgba(99,102,241,.92), rgba(34,211,238,.72));
-  color:#0b1020;
   padding:6px 10px;
   border-radius:999px;
   font-size:12px;
   font-weight:800;
   text-transform:uppercase;
   letter-spacing:.06em;
-  box-shadow:0 10px 22px rgba(2,6,23,.25);
+}
+/* Watched: theme indigo/cyan, soft 90° hue + light gloss (opacity falloff) */
+.page-index .status-badge.status-watched{
+  color:#0b1020;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,0) 55%),
+    linear-gradient(90deg, rgba(99,102,241,.92), rgba(34,211,238,.72));
+  box-shadow:0 10px 22px rgba(2,6,23,.25), inset 0 1px 0 rgba(255,255,255,.2);
+}
+/* Watchlist: lighter sky/blue, same “glass” treatment */
+.page-index .status-badge.status-watchlist{
+  color:#0b1020;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,0) 55%),
+    linear-gradient(90deg, rgba(56,189,248,.90), rgba(14,165,233,.65));
+  border:1px solid rgba(14,116,193,.2);
+  box-shadow:0 10px 22px rgba(2,6,23,.22), inset 0 1px 0 rgba(255,255,255,.2);
+}
+/* Abandoned: red/rose, readable light label */
+.page-index .status-badge.status-abandoned{
+  color:#f8fafc;
+  text-shadow:0 1px 1px rgba(2,6,23,.28);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,0) 55%),
+    linear-gradient(90deg, rgba(252,165,165,.88), rgba(220,38,38,.70));
+  border:1px solid rgba(248,250,252,.2);
+  box-shadow:0 10px 22px rgba(2,6,23,.22), inset 0 1px 0 rgba(255,255,255,.12);
 }
 .page-index .movie-card h3{margin:12px 0 4px;font-size:16px;letter-spacing:-.01em}
 .page-index .movie-card p{margin:4px 0;font-size:13px;color:var(--muted)}
