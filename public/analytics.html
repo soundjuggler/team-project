@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Movie Analytics</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="page-analytics">
+        <nav>
+            <div class="nav-left">
+                <a class="brand" href="index.html" aria-label="LETTERBOXXED Home">LETTERBOXXED</a>
+                <a href="index.html">Home</a>
+                <a href="add.html">Add Movie</a>
+                <a href="analytics.html">Analytics</a>
+            </div>
+            <a class="nav-github" href="https://github.com/yourname/your-repo" target="_blank" rel="noreferrer">
+                GitHub
+                <svg class="nav-external-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z"></path>
+                </svg>
+            </a>
+        </nav>
+        <h1>Analytics Dashboard</h1>
+        <div class="row row-4">
+            <div class="tile">
+                <h2>Total Movies</h2>
+                <div class="count" id="totalCount">0</div>
+            </div>
+            <div class="tile">
+                <h2>Watchlist</h2>
+                <div class="count" id="watchlistCount">0</div>
+            </div>
+            <div class="tile">
+                <h2>Watched</h2>
+                <div class="count" id="watchedCount">0</div>
+            </div>
+            <div class="tile">
+                <h2>Abandoned</h2>
+                <div class="count" id="abandonedCount">0</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="tile">
+                <h2>Must Watch (Top IMDb Ratings)</h2>
+                <div class="movie-list" id="mustWatch"></div>
+            </div>
+            <div class="tile">
+                <h2>My Favorites (Top My Ratings)</h2>
+                <div class="movie-list" id="favorites"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="tile">
+                <h2>Rating Comparison</h2>
+                <div class="chart-container">
+                    <canvas id="ratingChart"></canvas>
+                </div>
+            </div>
+            <div class="tile">
+                <h2>Watch Patterns</h2>
+                <div class="chart-container">
+                    <canvas id="statusChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="row row-3">
+            <div class="tile">
+                <h2>Watchlist Genres</h2>
+                <div class="chart-container">
+                    <canvas id="watchlistGenreChart"></canvas>
+                </div>
+            </div>
+            <div class="tile">
+                <h2>Watched Genres</h2>
+                <div class="chart-container">
+                    <canvas id="watchedGenreChart"></canvas>
+                </div>
+            </div>
+            <div class="tile">
+                <h2>Abandoned Genres</h2>
+                <div class="chart-container">
+                    <canvas id="abandonedGenreChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="tile">
+                <h2>Watched by Day of Week</h2>
+                <div class="chart-container">
+                    <canvas id="watchedDayChart"></canvas>
+                </div>
+            </div>
+            <div class="tile">
+                <h2>Abandoned by Day of Week</h2>
+                <div class="chart-container">
+                    <canvas id="abandonedDayChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <script src="analytics.js"></script>
+    </body>
+</html>

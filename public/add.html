@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Movie</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="page-add">
+    <nav>
+      <div class="nav-left">
+        <a class="brand" href="index.html" aria-label="LETTERBOXXED Home">LETTERBOXXED</a>
+        <a href="index.html">Home</a>
+        <a href="add.html">Add Movie</a>
+        <a href="analytics.html">Analytics</a>
+      </div>
+      <a class="nav-github" href="https://github.com/yourname/your-repo" target="_blank" rel="noreferrer">
+        GitHub
+        <svg class="nav-external-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z"></path>
+        </svg>
+      </a>
+    </nav>
+
+    <h1>Add a New Movie</h1>
+
+    <form id="add-movie-form" onsubmit="addMovie(event)">
+      <label for="movieTitle">Movie Title:</label>
+      <input id="movieTitle" type="text" name="title" placeholder="Enter movie title" required>
+      <button type="submit">Add Movie</button>
+    </form>
+
+    
+    <p id="responseMessage"></p>
+
+    <div id="recent-movie"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
